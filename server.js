@@ -94,9 +94,9 @@ app.get("/logout", (req, res) => {
   });
   });
 
-app.get("/secrets", (req, res) => {
+app.get("/profil", (req, res) => {
     if (req.isAuthenticated()) {
-      res.render("secrets.ejs");
+      res.render("profil.ejs");
     } else {
       res.redirect("/connexion");
     }
@@ -104,7 +104,7 @@ app.get("/secrets", (req, res) => {
 
   
 app.post("/connexion", passport.authenticate("local", {
-  successRedirect: "/secrets",
+  successRedirect: "/profil",
   failureRedirect: "/connexion",
 }));
 

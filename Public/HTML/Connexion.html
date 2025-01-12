@@ -44,7 +44,7 @@
         <div id="form-section">
 
                  
-            <form action="" id="formulaire">
+            <form action="/connexion" method="POST" id="formulaire">
               <div class="container">
                 <legend>CONNEXION</legend>
                 <div id="choiceStatut">
@@ -56,11 +56,11 @@
 
                 <div class="mb-3">
                   <label for="email" class="form-label">Adresse Mail</label>
-                  <input type="email" class="form-control" id="email1" aria-describedby="emailHelp" placeholder="Exemple@exemple.com" required autocomplete="off">
+                  <input type="email" name="username" class="form-control" id="email1" aria-describedby="emailHelp" placeholder="Exemple@exemple.com" required autocomplete="off">
                 </div>  
                 <div class="mb-3">
                   <label for="password" class="form-label">Mot de passe</label>
-                  <input type="password" class="form-control" id="password1" placeholder="Password" required autocomplete="off">
+                  <input type="password" name="password" class="form-control" id="password1" placeholder="Password" required autocomplete="off">
                 </div>
                 <div class="mb-3 form-check" id="submit">
                   <input type="submit" class="btn btn-outline-light" value="Se Connecter">
