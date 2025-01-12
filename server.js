@@ -1,3 +1,7 @@
+
+
+//-------------------DEPENDANCE-------------------------
+
 import express from "express";
 import bodyParser from "body-parser";
 import { dirname } from "path";
@@ -10,7 +14,7 @@ import { Strategy } from "passport-local";
 import bcrypt from "bcrypt";
 
 
-
+//--------------------PORT--------------
 
 const app = express();
 const port = 3000;
@@ -20,6 +24,7 @@ const saltRounds = 10;
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("Public"));
 
+//--------------------SESSION--------------
 
 app.use(
   session ({
@@ -37,6 +42,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
+//--------------------BDD--------------
+
 const db = new pg.Client({
   user: "postgres",
   host: "localhost",
@@ -49,7 +56,8 @@ const db = new pg.Client({
 db.connect();
 
 
- 
+ //--------------------ROUTES--------------
+
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/Public/HTML/Index.html"); 
 });
@@ -107,6 +115,9 @@ app.post("/connexion", passport.authenticate("local", {
   successRedirect: "/profil",
   failureRedirect: "/connexion",
 }));
+
+
+//--------------------AUTHENTIFICATION PASSPORT--------------
 
   passport.use(new Strategy(async function verify(username, password, cb) {
     console.log(username)
