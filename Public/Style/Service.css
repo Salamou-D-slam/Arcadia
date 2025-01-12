@@ -1,0 +1,185 @@
+          /* ----------------------Header-------------------- */
+
+#navbar {
+    height: 100px;
+    padding: 25px;
+    line-height: 76px;
+    background-color: #005E09;
+}
+
+/*div liste*/
+
+#navbarSupportedContent{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 19px;
+    color: #ffffff;
+    font-family: 'Inter';
+}
+
+
+#logo {
+
+position: relative;
+width: 250px;
+height: 50px;
+left: 40px;
+top: -20px;
+line-height: 76px;
+font-family: 'Kameron';
+
+
+font-size: 40px;
+
+}
+
+nav {
+    background-color: #048a21;
+ /*   background-color: linear-gradient(90deg, #005E09 0%, #00920F 100%); */
+}
+
+
+#connexion-button {
+    width: 123px;
+    height: 30px;
+    left: 1700px;
+    top: 38px;
+}
+
+
+
+/*------------------------------------------------------------------------*/
+
+
+
+            /*------------------COMMUN---------------------*/
+            .card{
+                margin: 50px auto;
+            }
+
+            .card-title{
+                text-decoration: underline;
+            font-family: 'Kameron';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 48px;
+            line-height: 57px;
+            /* identical to box height */
+            
+            color: #FFFFFF;
+            }
+            
+            .card-body{
+                margin: 20px auto;
+                font-family: 'Kameron';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 26px;
+            line-height: 43px;
+            text-align: center;
+            
+            color: #FFFFFF;
+            }
+            
+            
+            .card-body h1 , p {
+                color: #ffffff;
+            }
+            
+            
+            .card-body p {
+                margin: 60px auto;
+            }
+
+
+/*------------------------SECTION 1: RESTAURATION-----------------------*/
+
+#row-resto {
+    background-color: #778330;
+}
+
+/*----------------SECTION 2: Visite Habitat Avec guide--------------------*/
+
+
+#row-guide {
+    background-color: #30835B;
+}
+
+#img-guide{
+    width: 700px;
+}
+
+
+#text-div{
+    top: -200px;
+}
+
+/*------------------SECTION 3: Visite du zoo en petit train-----------------*/
+
+#row-train {
+    background-color: #304C83;
+}
+
+#img-train{
+    height: 361px;
+}
+
+/*----------------------------------------------FOOTER-----------------------------------------------*/
+
+#footer {
+
+
+    height: 206px;
+
+
+    background: #646464;
+
+}
+
+
+#div-footer{
+    width: 460px;
+    height: 206px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+#div-footer a{
+    margin:60px auto ;
+}
+
+#Logo-footer {
+    width: 250px;
+    height: 50px;
+    margin: 0px auto;
+}
+
+#copyright {
+    height: 20px;
+    margin: -60px auto;
+    color: #ffffff;
+}
+
+
+/*----------------------------- MEDIA QUERY-----------------------------------*/
+  
+
+@media (max-width: 768px) {
+
+    #img-guide {
+        width: 750px;
+    }
+
+    #img-train {
+        width: 750px;
+    }
+
+
+    .container-carousel {
+        width: 520px;
+        margin: -450px auto; 
+    }
+}   

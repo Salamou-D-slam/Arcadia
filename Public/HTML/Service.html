@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service</title>
+    <link rel="stylesheet" href="/Public/Style/Service.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body style="background-color: #005E09;">
+
+                                    <!--HEADER-->
+                                    <header>
+                                        <!--BOOSTRAP NAVBAR--> 
+      <nav class="navbar navbar-expand-lg" >
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/" id="logo" style="color: white;">ARCADIA</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/" style="color: white;">Accueil</a>
+                     </li>
+                     <li class="nav-item">
+                       <a class="nav-link" href="/service" style="color: white;">Service</a>
+                     </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="/habitat" style="color: white;">Habitat</a>
+                      </li>
+                      
+                      <li class="nav-item">
+                          <a class="nav-link" href="/contact" style="color: white;">Contact</a>
+                      </li>
+                  </ul>
+                        <a href="/connexion">
+                            <button type="button" class="btn btn-outline-light">Connexion</button>      
+                        </a>
+                </div>
+            </div>
+        </nav>                                               
+           </header>
+    <main>
+                            <!--SECTION 1: RESTAURATION-->
+<div class="card mb-3">
+  <div class="row g-0" id="row-resto">
+    <div class="col-md-4">
+      <img src="/Assets/Service - Restaurant - image 1.jpg" class="img-fluid rounded-start" id="img-resto" alt="image d'un restaurant">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h1 class="card-title">RESTAURATION</h1>
+        <p class="card-text">La restauration d'un zoo modernise ses installations pour améliorer le bien-être des animaux et enrichir l'expérience des visiteurs. Ce projet comprend la rénovation des enclos, l'intégration de technologies écologiques, et le développement de programmes éducatifs sur la conservation. L'objectif est de créer un environnement adapté aux besoins des animaux tout en sensibilisant le public à la préservation de la biodiversité.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+                        <!--SECTION 2: Visite Habitat Avec guide-->
+
+ <div class="card mb-3" >
+  <div class="row g-0" id="row-guide">
+    <div class="col-md-4">
+      <img src="/Assets/Serivce - Visite guide.jpg" class="img-fluid rounded-start" id="img-guide" alt="image d'un restaurant">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h1 class="card-title">Visite Habitat Avec guide</h1>
+        <p class="card-text">Une visite guidée d'un zoo permet de découvrir les animaux et leurs habitats grâce aux explications d'un expert. Le guide offre des informations intéressantes sur les espèces et les efforts de conservation, tout en répondant aux questions des visiteurs. Cette approche enrichissante rend la visite plus interactive et instructive.</p>
+      </div>
+    </div>
+  </div>
+</div>                       
+
+                        <!--SECTION 3: Visite du zoo en petit train-->
+
+ <div class="card mb-3">
+  <div class="row g-0" id="row-train">
+    <div class="col-md-4">
+      <img src="/Assets/Service - Visite train.jpg" class="img-fluid rounded-start" id="img-train" alt="image d'un restaurant">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h1 class="card-title">Visite du zoo en petit train</h1>
+        <p class="card-text">Bienvenue à bord du petit train du zoo ! Au cours de cette visite, vous aurez l'occasion de découvrir plusieurs espèces animales fascinantes tout en profitant d'une promenade agréable. Vous traverserez différents enclos et zones du parc, tout en apprenant des faits intéressants sur la faune et les efforts de conservation du zoo. Installez-vous temporairement et laissez-vous guider à travers ce voyage au cœur de la nature.</p>
+      </div>
+    </div>
+  </div>
+</div>                         
+    </main> 
+
+
+                                        <!-------------------FOOTER------------------->
+
+    <footer id="footer">
+        <div id="div-footer">
+            <a href="/"><img src="/Assets/Logo ARCADIA.png" alt="Logo arcadia" id="Logo-footer"></a>
+            <small id="copyright">Copyright © <span id="year"></span> Arcadia.fr. Tous droits réservés.</small>
+        </div>
+    </footer>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          new Date().getFullYear();
+          document.getElementById("year").innerHTML = new Date().getFullYear();
+        });  
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "arcadia",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.3",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "html": "^1.0.0",
+    "meta-url": "^1.0.4",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "path-dirname": "^1.0.2",
+    "pg": "^8.13.1",
+    "url": "^0.11.4"
+  }
+}

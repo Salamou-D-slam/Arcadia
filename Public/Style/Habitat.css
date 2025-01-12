@@ -1,0 +1,120 @@
+/*--------------------------------SASS--------------------------*/
+/*--------------------------------------------------------------*/
+/*---------------------------------------------- Header------------------------------------------ */
+/*navbar*/
+#navbarSupportedContent {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 19px;
+  color: #ffffff;
+  font-family: "Inter";
+}
+
+#logo {
+  position: relative;
+  width: 250px;
+  height: 50px;
+  left: 40px;
+  top: -20px;
+  line-height: 76px;
+  font-family: "Kameron";
+  font-size: 40px;
+}
+
+nav {
+  background-color: #048a21;
+  /*   background-color: linear-gradient(90deg, #005E09 0%, #00920F 100%); */
+}
+
+#connexion-button {
+  position: absolute;
+  width: 123px;
+  height: 30px;
+  left: 1700px;
+  top: 38px;
+}
+
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------COMMUN------------------------------------------*/
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 1000px;
+  margin: 50px auto;
+  /* box-shadow: 0px 0px 10px 0px rgb(0, 255, 85); */
+}
+
+.card-img-overlay {
+  height: 300px;
+  margin: 150px auto;
+  text-align: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  text-decoration: underline;
+  color: #ffffff;
+  font-size: 70px;
+}
+
+.card-img {
+  height: 500px;
+  filter: contrast(120%);
+  filter: brightness(110%);
+  filter: blur(2px);
+}
+
+.card-title {
+  width: 400px;
+  height: 100px;
+  margin: 0 auto;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  text-decoration: underline;
+  color: #ffffff;
+  font-size: 70px;
+  background-color: #006d55;
+  box-shadow: 0px 0px 10px 0px rgb(255, 255, 255);
+}
+
+.btn-success {
+  margin: 80px auto;
+  justify-content: center;
+}
+
+/*----------------------------------------------FOOTER-----------------------------------------------*/
+footer {
+  height: 206px;
+  background: #646464;
+}
+
+#div-footer {
+  width: 460px;
+  height: 206px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+#div-footer a {
+  margin: 60px auto;
+}
+
+#Logo-footer {
+  width: 250px;
+  height: 50px;
+  margin: 0px auto;
+}
+
+#copyright {
+  height: 20px;
+  margin: -60px auto;
+  color: #ffffff;
+}/*# sourceMappingURL=Habitat.css.map */
