@@ -47,7 +47,7 @@ app.use(passport.session());
 const db = new pg.Client({
   user: "postgres",
   host: "localhost",
-  database: "ArcadiaDB",
+  database: "Arcadia",
   password: "setifsalamou_19000",
   port: 5432,
 });
@@ -93,7 +93,7 @@ app.get("/marais", (req, res) => {
 
 
 
-app.get("/logout", (req, res) => {
+app.get("/deconnexion", (req, res) => {
   req.logout(function (err) {
     if (err) {
       return next(err);
@@ -159,36 +159,6 @@ app.post("/connexion", passport.authenticate("local", {
     });
 
 
-
-
-/*
-app.post("/check", async (req, res) => {
-  const email = req.body.username;
-  const password = req.body.password;
-
-  try {
-    const result = await db.query("SELECT * FROM users WHERE email = $1", [
-      email,
-    ]);
-
-    if (result.rows.length > 0) {
-      const user = result.rows[0];
-      const storedPassword = user.password;
-
-      if (password === storedPassword) {
-        res.render("secrets.ejs");  //__dirname + "/public/secret.html"
-      } else {
-        res.send("Mot de passe incorrect.");
-      }
-      
-    } else {
-      res.send("utilisateur non trouvé.");
-    }
-  } catch (err) {
-    console.log(err);
-  }
-});
-*/
 
 
 app.listen(port, () => {

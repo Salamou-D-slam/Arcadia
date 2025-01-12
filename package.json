@@ -6,6 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  
+
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -13,6 +15,7 @@
   "dependencies": {
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.3",
+    "bootstrap": "^5.3.3",
     "ejs": "^3.1.10",
     "express": "^4.21.2",
     "express-session": "^1.18.1",
@@ -24,5 +27,8 @@
     "path-dirname": "^1.0.2",
     "pg": "^8.13.1",
     "url": "^0.11.4"
+  },
+  "devDependencies": {
+    "sass": "^1.83.1"
   }
 }
