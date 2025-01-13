@@ -25,7 +25,7 @@ const saltRounds = 10;
 
 
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static("Public"));
+app.use(express.static("Frontend"));
 
 //--------------------SESSION--------------
 
@@ -62,35 +62,35 @@ db.connect();
  //--------------------ROUTES--------------
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/Public/HTML/Index.html"); 
+  res.sendFile(__dirname + "/Frontend/Public/HTML/Index.html"); 
 });
 
 app.get("/connexion", (req, res) => {
-  res.sendFile(__dirname + "/Public/HTML/Connexion.html"); 
+  res.sendFile(__dirname + "/Frontend/Public/HTML/Connexion.html"); 
 });
 
 app.get("/service", (req, res) => {
-  res.sendFile(__dirname + "/Public/HTML/Service.html"); 
+  res.sendFile(__dirname + "/Frontend/Public/HTML/Service.html"); 
 });
 
 app.get("/habitat", (req, res) => {
-  res.sendFile(__dirname + "/Public/HTML/Habitat.html"); 
+  res.sendFile(__dirname + "/Frontend/Public/HTML/Habitat.html"); 
 });
 
 app.get("/contact", (req, res) => {
-  res.sendFile(__dirname + "/Public/HTML/Contact.html"); 
+  res.sendFile(__dirname + "/Frontend/Public/HTML/Contact.html"); 
 });
 
 app.get("/savane", (req, res) => {
-  res.sendFile(__dirname + "/Public/HTML/Savane.html"); 
+  res.sendFile(__dirname + "/Frontend/Public/HTML/Savane.html"); 
 });
 
 app.get("/jungle", (req, res) => {
-  res.sendFile(__dirname + "/Public/HTML/Jungle.html"); 
+  res.sendFile(__dirname + "/Frontend/Public/HTML/Jungle.html"); 
 });
 
 app.get("/marais", (req, res) => {
-  res.sendFile(__dirname + "/Public/HTML/Marais.html"); 
+  res.sendFile(__dirname + "/Frontend/Public/HTML/Marais.html"); 
 });
 
 
