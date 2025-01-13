@@ -95,7 +95,6 @@ app.get("/marais", (req, res) => {
 
 
 
-
 app.get("/deconnexion", (req, res) => {
   req.logout(function (err) {
     if (err) {
@@ -104,6 +103,15 @@ app.get("/deconnexion", (req, res) => {
     res.redirect("/");
   });
   });
+
+  // Route pour vérifier l'état d'authentification
+app.get('/api/auth/status', (req, res) => {
+  if (req.isAuthenticated && req.isAuthenticated()) {
+      res.json({ isAuthenticated: true, username: req.user.username }); // Si l'utilisateur est connecté
+  } else {
+      res.json({ isAuthenticated: false }); // Si l'utilisateur n'est pas connecté
+  }
+});
 
 app.get("/profil", (req, res) => {
     if (req.isAuthenticated()) {
@@ -160,6 +168,7 @@ app.post("/connexion", passport.authenticate("local", {
     passport.deserializeUser((user, cb) => {
       cb(null, user);
     });
+
 
 
 
