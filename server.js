@@ -113,6 +113,7 @@ app.get('/api/auth/status', (req, res) => {
   }
 });
 
+//
 app.get("/profil", (req, res) => {
     if (req.isAuthenticated()) {
       res.render("profil.ejs");
