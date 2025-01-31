@@ -17,3 +17,7 @@ build/
 # Fichiers de sauvegarde
 *.bak
 *.swp
+
+#fichier code serveur
+server.js
+BDD.sql

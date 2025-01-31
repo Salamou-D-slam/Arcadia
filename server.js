@@ -6,7 +6,6 @@ import express from "express";
 import bodyParser from "body-parser";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
-const __dirname = dirname(fileURLToPath(import.meta.url));
 import pg from "pg";
 import session from "express-session";
 import passport from "passport";
@@ -15,6 +14,8 @@ import bcrypt from "bcrypt";
 
 import dotenv from 'dotenv';
 dotenv.config();
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 
 //--------------------PORT--------------
