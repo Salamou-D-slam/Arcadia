@@ -18,6 +18,8 @@ build/
 *.bak
 *.swp
 
-#fichier code serveur
+# Ignorer un fichier JavaScript spécifique
 server.js
+
+# Ignorer un fichier SQL spécifique
 BDD.sql

@@ -11,8 +11,8 @@ import session from "express-session";
 import passport from "passport";
 import { Strategy } from "passport-local";
 import bcrypt from "bcrypt";
-
 import dotenv from 'dotenv';
+
 dotenv.config();
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -149,12 +149,12 @@ app.post("/connexion", passport.authenticate("local", {
               if (result) {
                 return cb(null, user);
               } else {
-                return cb(null, false);
+                return cb("Le mot de pass que vous avez saisi est faux");
               }
             }
           });
         } else {
-          return cb("User not found");
+          return cb("L'utilisateur n'existe pas");
         }
       } catch (err) {
         return cb(err);
