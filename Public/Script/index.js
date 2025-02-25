@@ -69,3 +69,13 @@ function leave(x) {
    document.querySelector(`.container-animaux`).onmouseleave = function() {
     onmouseout = leave(this);
    };
+
+
+   // Page de connexion: stocker l'email et l'id
+
+   document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector(`#formulaire`).onsubmit = function() {
+     const name = document.querySelector('#email1').value;
+     alert(`Votre Commentaire a bien été envoyé au nom de ${name}. Merci pour votre avis`);
+ };
+});
