@@ -20,6 +20,12 @@ build/
 
 # Ignorer un fichier JavaScript spécifique
 server.js
+#Dossier Serveur
+config/
+controllers/
+models/
+routes/
+views/
 
 # Ignorer un fichier SQL spécifique
 BDD.sql
