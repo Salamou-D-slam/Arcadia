@@ -20,6 +20,7 @@ build/
 
 # Ignorer un fichier JavaScript spécifique
 server.js
+
 #Dossier Serveur
 config/
 controllers/
