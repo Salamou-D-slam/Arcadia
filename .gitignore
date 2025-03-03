@@ -1,7 +1,6 @@
 # Node modules (dépendances installées par npm)
 node_modules/
-package-lock.json
-package.json
+
 
 # Fichiers de logs
 npm-debug.log
@@ -24,12 +23,8 @@ build/
 server.js
 
 #Dossier Serveur
-config/
-controllers/
-models/
-routes/
-Views/
-middlewares/
+
+
 
 # Ignorer un fichier SQL spécifique
 BDD.sql
