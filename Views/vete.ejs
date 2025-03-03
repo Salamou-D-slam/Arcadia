@@ -1,5 +1,17 @@
-<h1>Bienvenue Vétérinaire</h1>
-<a href="/">Retour à l'accueil</a>
-<form action="/deconnexion">
-    <input type="submit" class="btn btn-outline-light" value="Se déconnecter">
-    </form>
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Vétérinaire</title>
+    <link rel="stylesheet" href="Style/accueil.css">
+</head>
+
+<%- include("partials/header.ejs") %>
+
+
+    <h1>Bienvenue Vétérinaire</h1>
+    <a href="/deconnexion">Déconnexion</a>
+
+    <%- include("partials/footer.ejs") %>
