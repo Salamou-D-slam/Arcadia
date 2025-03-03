@@ -113,7 +113,7 @@ router.get('/api/auth/status', (req, res) => {
     console.log(username)
       try {
         const result = await db.query(
-          `SELECT users.id, users.email, users.password, users.role_id, roles.label AS role_name 
+          `SELECT users.id, users.nom, users.email, users.password, users.role_id, roles.label AS role_name 
            FROM users 
            JOIN roles ON users.role_id = roles.id 
            WHERE users.email = $1`, [
@@ -137,12 +137,15 @@ router.get('/api/auth/status', (req, res) => {
                 // Log de l'utilisateur retourné
                 console.log('Utilisateur authentifié:', {
                   id: user.id,
+                  nom: user.nom,
                   email: user.email,
                   role: user.role_name
               });
               
               const userWithRole = {
                 id: user.id,
+                nom: user.nom,
+
                 email: user.email,
                 role_id: user.role_id, // Ajout du rôle ici
                 role_name: user.role_name 
