@@ -63,24 +63,26 @@ router.get("/deconnexion", (req, res) => {
     res.redirect("/");
   });
   });
+  
 
   // Route pour vérifier l'état d'authentification
+  
 router.get('/api/auth/status', (req, res) => {
   if (req.isAuthenticated && req.isAuthenticated()) {
-      res.json({ isAuthenticated: true, username: req.user.username }); // Si l'utilisateur est connecté
+      res.json({ 
+        isAuthenticated: true, // Si l'utilisateur est connecté
+        username: req.user.username, // On récupère le username de l'utilisateur depuis la session
+        role_name: req.user.role_name,  }); // On récupère le rôle de l'utilisateur depuis la session
   } else {
-      res.json({ isAuthenticated: false }); // Si l'utilisateur n'est pas connecté
+    return res.json({
+      isAuthenticated: false,
+      user: null,
+      role_name: null,
+
+      });
   }
 });
 
-//
-router.get("/profil", (req, res) => {
-    if (req.isAuthenticated()) {
-      res.render("profil.ejs");
-    } else {
-      res.redirect("/connexion");
-    }
-  });
 
   
   router.post(
@@ -91,12 +93,12 @@ router.get("/profil", (req, res) => {
     }),
     (req, res) => {
       // 🔹 Redirection selon le rôle
-      switch (req.user.role_id) {
-        case 1:
+      switch (req.user.role_name) {
+        case 'administrateur':
           return res.redirect("/admin");
-        case 2:
+        case 'employé':
           return res.redirect("/employe");
-        case 3:
+        case 'vétérinaire':
           return res.redirect("/veterinaire");
         default:
           return res.redirect("/");
@@ -111,24 +113,42 @@ router.get("/profil", (req, res) => {
     console.log(username)
       try {
         const result = await db.query(
-          `SELECT users.id, users.email, users.password, users.role_id, roles.label AS label 
+          `SELECT users.id, users.email, users.password, users.role_id, roles.label AS role_name 
            FROM users 
            JOIN roles ON users.role_id = roles.id 
            WHERE users.email = $1`, [
           username,
         ]);
+        console.log(result.rows[0]);
 
         if (result.rows.length > 0) {
           const user = result.rows[0];  
           const storedHashedPassword = user.password;
+
           bcrypt.compare(password, storedHashedPassword, (err, result) => {
 
             if (err) {
               console.error("Error comparing passwords:", err);
               return cb(err);
+
             } else {
-              if (result) {
-                return cb(null, user);
+
+             if (result) {
+                // Log de l'utilisateur retourné
+                console.log('Utilisateur authentifié:', {
+                  id: user.id,
+                  email: user.email,
+                  role: user.role_name
+              });
+              
+              const userWithRole = {
+                id: user.id,
+                email: user.email,
+                role_id: user.role_id, // Ajout du rôle ici
+                role_name: user.role_name 
+            };
+
+                return cb(null, userWithRole);
               } else {
                 return cb("Le mot de pass que vous avez saisi est faux");
               }
@@ -141,6 +161,34 @@ router.get("/profil", (req, res) => {
         return cb(err);
       }
     }));
-    
+
+    passport.serializeUser((user, cb) => {
+          cb(null, user);
+        });
+        
+        passport.deserializeUser((user, cb) => {
+          cb(null, user);
+        });
+        /*
+        passport.deserializeUser(async (id, done) => {
+          try {
+            const result = await db.query(
+              `SELECT users.id, users.email, users.role_id, roles.label AS role_name
+               FROM users 
+               JOIN roles ON users.role_id = roles.id 
+               WHERE users.id = $1`,
+              [id]
+            );
+        
+            if (result.rows.length === 0) {
+              return done(null, false);
+            }
+        
+            const user = result.rows[0];
+            done(null, user);
+          } catch (err) {
+            done(err);
+          }
+        });*/
     
     export default router;

@@ -1,3 +1,4 @@
+
 /*
 import db from "../config/db.js";
 
@@ -7,4 +8,5 @@ export const getAllUsers = async () => {
         FROM users
         JOIN roles ON users.role_id = roles.id
     `);
-};*/
+};
+*/
