@@ -1,0 +1,25 @@
+<% if (typeof newListServices !== "undefined" && newListServices.length > 0) { %>
+    <% newListServices.forEach(service => { %>
+        <form action="/delete" method="post">
+            <div class="card mb-3">
+                <div class="row g-0" id="row-resto">
+                    <div class="col-md-4">
+                        <img src="<%= service.Image %>" class="img-fluid rounded-start" id="img-resto" alt="image d'un restaurant">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h1 class="card-title"><%= service.Titre %></h1>
+                            <p class="card-text"><%= service.Description %></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="service">
+                <input type="checkbox" name="checkbox" value="<%= service._id %>" onChange="this.form.submit()">
+                <p><%= service.Titre %></p>
+            </div>
+        </form>
+    <% }); %>
+    <% } else { %>
+        <p>Aucun service disponible.</p>
+    <% } %>
