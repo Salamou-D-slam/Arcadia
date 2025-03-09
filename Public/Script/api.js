@@ -15,10 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         window.location.href = '/admin'; // Redirige vers la page admin
                         break;
                     case 'employé':
-                        window.location.href = '/employe'; // Redirige vers la page user
+                        window.location.href = '/employe'; // Redirige vers la page employé
                         break;
                     case 'vétérinaire':
-                        window.location.href = '/veterinaire'; // Redirige vers la page moderator
+                        window.location.href = '/veterinaire'; // Redirige vers la page vétérinaire
                         break;
                     default:
                         // Si le rôle n'est pas reconnu, rediriger vers une page par défaut ou une erreur
