@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employé</title>
+    <link rel="stylesheet" href="Style/accueil.css">
+    <style>
+                body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+
+        h1, h2 , h3 , p  {
+            color: #ffffff;
+        }
+        
+        .tabs {
+            display: flex;
+            margin: 60px auto;
+            justify-content: center;
+            border-bottom: 2px solid #ffffff;
+        }
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-size: 18px;
+            color: #ffffff;
+            outline: none;
+        }
+        .tab.active {
+            font-weight: bold;
+            border-bottom: 3px solid #ffffff;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        
+        #div-footer{
+    width: 460px;
+    height: 206px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 221px auto;
+}
+    </style>
+
+    <%- include("partials/header.ejs") %>
+
+    <h2>Mon Profil</h2>
+
+    <!-- Onglets -->
+    <div class="tabs">
+        <button class="tab active" onclick="openTab(event, 'profile')">Profil</button>
+        <button class="tab" onclick="openTab(event, 'avis')">Avis</button>
+    </div>
+
+    <!-- Contenu des onglets -->
+    <div id="profile" class="tab-content active">
+        <h3>Informations du Profil</h3>
+        <p>Nom : <span id="username"><%= user.nom %></span></p>
+        <p>Email : <span id="email"><%= user.email %></span></p>
+        <p>Rôle : <span id="role"><%= user.role_name %></span></p>
+    </div>
+    
+    <div id="avis" class="tab-content">
+        <h3>Avis</h3>
+        <a href="/avis">
+            <button class="btn btn-success">Gérer les avis</button>
+        </a>
+    </div>
+
+    <script>
+        function openTab(event, tabId) {
+            // Cacher tous les contenus
+            let contents = document.querySelectorAll(".tab-content");
+            contents.forEach(content => content.classList.remove("active"));
+
+            // Désactiver tous les onglets
+            let tabs = document.querySelectorAll(".tab");
+            tabs.forEach(tab => tab.classList.remove("active"));
+
+            // Afficher le bon contenu et activer l'onglet
+            document.getElementById(tabId).classList.add("active");
+            event.currentTarget.classList.add("active");
+        }
+
+
+    </script>
+
+<form action="/deconnexion">
+<input type="submit" class="btn btn-outline-light" value="Se déconnecter">
+</form>
+<%- include("partials/footer.ejs") %>

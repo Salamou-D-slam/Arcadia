@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcadia</title>
+    <link rel="stylesheet" href="Style/accueil.css">
+
+    <%- include("partials/header.ejs") %>
+
+    <!-- --------------------------------------SECTION 1 ------------------------------------------------- -->
+
+
+    <main>
+        <div id="container-intro">   
+            <div id="img-fond" ><!-- image de fond --></div>
+            <div id="degrader"><!-- dégrader --></div>
+         
+            <div class="intro">
+                <h1 id="title-arcadia">ARCADIA</h1>
+                <p id="para-intro">Arcadia est un zoo situé en France près de la forêt de Brocéliande, en bretagne depuis 1960. 
+                Ils possèdent tout un panel d’animaux, réparti par habitat (savane, jungle, marais) et font 
+                extrêmement attention à leurs santés. Chaque jour, plusieurs vétérinaires viennent afin 
+                d’effectuer les contrôles sur chaque animal avant l’ouverture du zoo afin de s’assurer que tout 
+                se passe bien, de même, toute la nourriture donnée est calculée afin d’avoir le bon grammage.
+                </p>
+            </div>
+        
+                                             <!--BOOSTRAP IMAGE CAROUSEL-->
+
+
+<div class="container-carousel">
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/Assets/Accueil - Carousel 1.jpg" class="d-block w-100" alt="image de giraffes">
+      </div>
+      <div class="carousel-item">
+        <img src="/Assets/Accueil - Carousel 2.jpg" class="d-block w-100" alt="image de pingouins">
+      </div>
+      <div class="carousel-item">
+        <img src="/Assets/Accueil - Carousel 3.jpg" class="d-block w-100" alt="image de singes">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" id="button-left">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" id="button-right">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+</div>
+
+        <!-- -------------------------------------SECTION 2-------------------------------- -->
+
+              
+                <div class="card text-center">
+                  <div class="card-header" id="services-card-header">
+                    <h1>SERVICES</h1>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Découvrez Nos Services</h5>
+                    <p class="card-text">Le Zoo Arcadia propose plusieurs services dont la Restauration, les visite habitats avec guide ainsi que les visite du zoo en petit train.</p>
+                    <a href="/service" class="btn btn-success">En Savoir Plus</a>
+                  </div>
+                </div>
+
+            <!-- -------------------------------------SECTION 3-------------------------------- -->
+              
+        <div id="container-habitat"> 
+         <div id="habitat-div">
+            <h2 id="habitat-title">HABITATS</h2>
+         </div>  
+                <div id="savane" class="block-img">
+                     <a href="/savane">    
+                        <img src="/Assets/Accueil - Savane.jpg" alt="savane" class="habitat-img">
+                        <h3 class="habitat-h3">SAVANE</h3>
+                    </a>
+                    
+                </div>
+                <div id="jungle" class="block-img">
+                    <a href="/jungle">
+                        <img src="/Assets/Accueil - jungle.jpg" alt="jungle" class="habitat-img">
+                        <h3 class="habitat-h3">JUNGLE</h3>
+                    </a>
+                </div>
+                <div id="marais" class="block-img">
+                    <a href="/marais">
+                        <img src="/Assets/Accueil -marais.jpg" alt="marais" class="habitat-img">
+                        <h3 class="habitat-h3">MARAIS</h3>
+                    </a>    
+                </div>
+        </div>     
+
+        <!-- ---------------------------------------------SECTION 4 ----------------------------------- -->
+
+      <div class="container-animaux">
+        <h1 id="animaux-h1">Nos Animaux</h1>
+        <div class="card" style="width: 25rem;" id="card-animaux">
+          <div class="btn-group" role="group" aria-label="Large button group">
+              <a href="/savane">   <button type="button" class="btn btn-outline-success">Savane</button>   </a>
+              <a href="/jungle">   <button type="button" class="btn btn-outline-success">Jungle</button>   </a>
+              <a href="/marais">   <button type="button" class="btn btn-outline-success">Marais</button>   </a>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <h3>Savane</h3>
+              <ul class="list-group">
+                <li class="list-group-item">Lions</li>
+                <li class="list-group-item">Giraffes</li>
+                <li class="list-group-item">Zèbres</li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <h3>Jungle</h3>
+              <ul class="list-group">
+                <li class="list-group-item">Singes</li>
+                <li class="list-group-item">Ecureuils</li>
+                <li class="list-group-item">Hiboux</li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <h3>Marais</h3>
+              <ul class="list-group">
+                <li class="list-group-item">Pingouins</li>
+                <li class="list-group-item">Flamants Rose</li>
+                <li class="list-group-item">Canards</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+         <!-- ---------------------------------------------SECTION 5 ----------------------------------- -->
+
+        <div id="container-avis">            
+            
+            <div id="formulaire">
+                <div id="avis-h1-div">
+                    <h1>Votre avis compte</h1>
+                </div>
+
+
+                             <!--BOOSTRAP FORM-->
+            <form action="/avis" name="avisForm" class="avis" id="avisForm" method="post">
+                <div id="input-group">
+                    <input type="text" name="pseudo" aria-label="First name" class="form-control-1" id="pseudo" placeholder="Pseudo" autocomplete="off" required>
+                </div>
+
+                             <!--MY FORM AVIS-->                         
+                
+                    <div id="avis-form">
+                        <textarea class="form-control" name="commentaire" id="commentaire" rows="3" placeholder="Donnez un avis" required ></textarea>
+                        <button type="submit" class="btn btn-outline-primary" id="button-avis">Envoyer</button>
+                    </div>
+</form>
+                    <div id="espace-avis">
+                        <% avis.forEach(function(avis) { %>
+                            <div class="avis-users">
+                                <p><strong><%= avis.pseudo %> :</strong></p>
+                                <p><%= avis.commentaire %></p>
+
+                                <form action="/avisDelete" method="post" >
+                                    <input type="hidden" name="id" value="<%= avis.id %>">
+                                    <input type="image" src="Assets\delete-icon.png" class="admin-btn icons-serv">
+                                </form> 
+                                <span id="date_creation"><%= avis.date_creation %></span>
+                            </div>
+                        <% }); %>
+                    </div>
+            
+
+            </div>
+        </div>
+    </main>
+             
+                        <!-- -----------------------------------------FOOTER--------------------------------------- -->
+    <footer id="footer">
+            <div id="div-footer">
+                <a href="/"><img src="/Assets/Logo ARCADIA.png" alt="Logo arcadia" id="Logo-footer"></a>
+                <small id="copyright">Copyright © <span id="year"></span> Arcadia.fr. Tous droits réservés.</small>
+            </div>
+    </footer>
+            
+    
+    <script src="Script/index.js"></script>
+    <script src="Script/api.js"></script>
+    <script src="Script/avisAPI.js"></script>
+    <script src="Script/serviceAPI.js"></script>
+
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

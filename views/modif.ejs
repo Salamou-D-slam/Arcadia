@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifier un Service</title>
+    <link rel="stylesheet" href="/Public/Style/Service.css">
+    <link rel="stylesheet" href="Style/Service2.css">
+
+    <style>
+   
+    </style>
+    <%- include("partials/header.ejs") %>
+
+
+    <h1 class="text-center">Modifier un Service</h1>
+
+    <form action="/maj/<%= serviceModif._id %>" method="POST" enctype="multipart/form-data" class="admin-btn">
+        <div class="mb-3">
+            <label for="title" class="form-label">Titre</label>
+            <input type="text" id="title" name="title" class="form-control" value="<%= serviceModif.title %>" >
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea id="description" name="description" class="form-control" ><%= serviceModif.description %></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">Image</label>
+            <input type="file" id="image" name="image" class="form-control">
+            <p>Image actuelle :</p>
+            <img src="<%= serviceModif.image %>" alt="Service Image" width="100">
+        </div>
+        <button type="submit" class="btn btn-success">Enregistrer</button>
+        <a href="/service" class="btn btn-secondary">Annuler</a>
+    </form>
+
+    <%- include("partials/footer.ejs") %>

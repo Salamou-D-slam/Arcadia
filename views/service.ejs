@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service</title>
+    <link rel="stylesheet" href="Style/Service.css">
+    <link rel="stylesheet" href="Style/Service2.css">
+
+    <%- include("partials/header.ejs") %>
+
+  <form action="/add" method="POST" enctype="multipart/form-data" class="add admin-btn" id="add">
+    <div class="mb-3">
+      <label for="title" class="form-label">Titre</label>
+      <input type="text" name="title" class="form-control" id="exampleFormControlInput1" required>
+    </div>
+    <div class="mb-3">
+      <label for="description">Description</label>
+      <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+    </div>
+    <div class="input-group mb-3">
+      <label for="image" class="input-group-text" for="inputGroupFile02">Image</label>
+      <input type="file" class="form-control" id="inputGroupFile02" name="image" accept="image/*" required>
+    </div class="d-grid gap-2 col-6 mx-auto">
+    
+    <button type="submit" class="btn btn-primary" >Ajouter un service</button>
+  </form>
+
+
+  <ul>
+    <% services.forEach(service => { %>
+       
+            <div class="card mb-3">
+                <div class="row g-0" id="row-resto">
+                  <div class="service">        
+                          
+                    
+                    <a href="/modif/<%= service._id %>" class="btn-success admin-btn icons-serv">
+                        <input type="image" src="Assets\edit.png" class="admin-btn ">
+                    </a>
+
+                    <form action="/delete" method="post" >
+
+                      <input type="hidden" name="id" value="<%= service._id %>">
+                      <input type="image" src="Assets\delete-icon.png" class="admin-btn icons-serv">
+                     </form>  
+                    </div>
+
+                    <div class="col-md-4">
+                        <img src="<%= service.image %>" class="img-fluid rounded-start" id="img-resto" alt="<%= service.title %>">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h1 class="card-title"><%= service.title %></h1>
+                            <p class="card-text"><%= service.description %></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+         
+          
+    <% }); %>
+  </ul>
+
+  
+
+
+
+
+  <footer id="footer">
+    <div id="div-footer">
+        <a href="/"><img src="/Assets/Logo ARCADIA.png" alt="Logo arcadia" id="Logo-footer"></a>
+        <small id="copyright">Copyright © <span id="year"></span> Arcadia.fr. Tous droits réservés.</small>
+    </div>
+</footer>
+
+  <script src="Script/index.js"></script>
+  <script src="Script/serviceAPI.js"></script>
+  <script src="Script/api.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
+
