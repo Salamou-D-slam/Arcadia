@@ -9,6 +9,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": "22.11.0"
+  },
   "description": "",
   "dependencies": {
     "bcrypt": "^5.1.1",
@@ -31,6 +34,7 @@
     "url": "^0.11.4"
   },
   "devDependencies": {
+    "@flydotio/dockerfile": "^0.7.8",
     "sass": "^1.83.1"
   }
 }
