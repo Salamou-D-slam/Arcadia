@@ -1,6 +1,7 @@
 # Node modules (dépendances installées par npm)
 node_modules/
-
+package-lock.json
+package.json
 
 # Fichiers de logs
 npm-debug.log
