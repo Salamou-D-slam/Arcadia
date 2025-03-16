@@ -4,7 +4,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -12,7 +13,6 @@
   "engines": {
     "node": "22.11.0"
   },
-  "description": "",
   "dependencies": {
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.3",
@@ -36,5 +36,6 @@
   "devDependencies": {
     "@flydotio/dockerfile": "^0.7.8",
     "sass": "^1.83.1"
-  }
+  },
+  "description": ""
 }

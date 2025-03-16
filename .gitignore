@@ -25,12 +25,7 @@ build/
 server.js
 
 # Ignore les dossier coté serveur 
-config/
-controllers/
-models/
-routes/
-Views/
-middlewares/
+
 
 # Ignorer un fichier SQL spécifique
 BDD.sql
