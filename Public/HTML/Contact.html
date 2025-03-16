@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,20 +45,20 @@
                 
         <div id="section-form">
             <div class="container">
-                <form name="contactForm" id="contactForm">
+                <form action="contactRole" method="post" name="contactForm" id="contactForm">
                     <legend>Contact</legend>
                                 <!--BOOSTRAP FORM-->
                     <div class="mb-3">
                         <label for="Titre" class="form-label">Titre</label>
-                        <input type="text" class="form-control" id="nom-form" required autocomplete="off">
+                        <input type="text" name="titreC" class="form-control" id="nom-form" required autocomplete="off" placeholder="Votre titre">
                       </div>
                       <div class="mb-3">
-                        <label for="mail" class="form-label">Mail</label>
-                        <input type="email" class="form-control" id="mail-form" required autocomplete="off">
+                        <label for="Mail" class="form-label">Mail</label>
+                        <input type="email"  name="emailC" class="form-control" id="mail-form" required autocomplete="off" placeholder="mail@gmail.com">
                       </div>
                       <div class="mb-3">
                         <label for="Description" class="form-label">Description</label>
-                        <textarea class="form-control" id="comment-form" rows="3" required autocomplete="off"></textarea>
+                        <textarea class="form-control" name="descriptionC" id="comment-form" rows="3" required autocomplete="off" placeholder="Description"></textarea>
                       </div>
                       <div class="mb-3 form-check">
                         <input type="submit" class="btn btn-success button" value="Enoyer">
