@@ -15,6 +15,7 @@ build/
 # Fichiers de configuration locaux
 *.env
 *.local
+.idea
 
 # Fichiers de sauvegarde
 *.bak
