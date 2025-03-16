@@ -13,13 +13,13 @@ async function getUserProfile() {
         document.getElementById("username").textContent = data.username;
     } else {
         alert("Impossible de récupérer le profil !");
-        window.location.href = "login.html";
+        window.location.href = "/connexion";
     }
 }
 
 function logout() {
     localStorage.removeItem("userEmail");
-    window.location.href = "login.html";
+    window.location.href = "/connexion";
 }
 
 getUserProfile();
