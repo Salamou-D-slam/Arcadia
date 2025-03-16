@@ -33,3 +33,4 @@ middlewares/
 
 # Ignorer un fichier SQL spécifique
 BDD.sql
+backup.sql
