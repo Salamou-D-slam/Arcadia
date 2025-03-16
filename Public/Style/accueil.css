@@ -390,7 +390,7 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 
 
-#comment {
+#commentaire {
     width:504px ;
 }
 
@@ -413,9 +413,34 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin: 0 auto;
     background-color: #FFFFFF;
 
+    overflow-y: auto;
+
 }
 
+.avis-users {
+    margin-bottom: 10px; 
+    padding: 10px;
+    border-bottom: 1px solid #ddd; 
 
+    font-family: 'Kameron';
+    font-style: normal;
+    font-size: 20px;
+
+}
+
+.icons-serv {
+    display: flex;
+    flex-wrap: wrap;
+
+    float: right;
+    margin: -55px auto;
+    
+    width: 4%;
+    height: 4%;
+
+
+
+}
 
 
 
@@ -451,6 +476,7 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin: -60px auto;
     color: #ffffff;
 }
+
 
 
 

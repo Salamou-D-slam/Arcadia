@@ -181,16 +181,16 @@
 
 
                              <!--BOOSTRAP FORM-->
-            <form name="avisForm" class="avis" method="get">
+            <form action="/avis" name="avisForm" class="avis" id="avisForm" method="post">
                 <div id="input-group">
-                    <input type="text" aria-label="First name" class="form-control-1" id="pseudo" placeholder="Pseudo" autocomplete="off" required>
+                    <input type="text" name="pseudo" aria-label="First name" class="form-control-1" id="pseudo" placeholder="Pseudo" autocomplete="off" required>
                 </div>
 
                              <!--MY FORM AVIS-->                         
                 
                     <div id="avis-form">
-                        <textarea class="form-control" id="comment" rows="3" placeholder="Donnez un avis" required ></textarea>
-                        <input type="submit" name = "avisButton" class="btn btn-outline-primary" id="button-avis">
+                        <textarea class="form-control" name="commentaire" id="commentaire" rows="3" placeholder="Donnez un avis" required ></textarea>
+                        <button type="submit" class="btn btn-outline-primary" id="button-avis">Envoyer</button>
                     </div>
                     <div id="espace-avis"></div>
             </form>
@@ -210,6 +210,8 @@
     
     <script src="Script/index.js"></script>
     <script src="Script/api.js"></script>
+    <!-- <script src="Script/avis.js"></script> -->
+    
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
