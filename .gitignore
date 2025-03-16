@@ -14,6 +14,7 @@ build/
 # Fichiers de configuration locaux
 *.env
 *.local
+.idea
 
 
 # Fichiers de sauvegarde
@@ -25,8 +26,11 @@ server.js
 
 # Ignore les dossier coté serveur 
 
+<<<<<<< HEAD
 .idea/
 .github/
+=======
+>>>>>>> aaaad92b4c87c1df89160e76abd687909bcd5e0f
 
 # Ignorer un fichier SQL spécifique
 BDD.sql
