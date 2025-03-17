@@ -1,9 +1,6 @@
 import express from 'express';
-import mongoose from 'mongoose';
-import multer from 'multer';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { dirname } from "path";
 import dotenv from 'dotenv';
 import db from "../config/db.js";
 import {checkRole , isAuthenticated} from '../middlewares/authMiddleware.js';
@@ -44,7 +41,7 @@ router.get('/avis', isAuthenticated, checkRole([1,2]), async (req, res) => {
 
   
 
-// Route pour afficher les services
+// Route pour afficher les avis
 router.post('/avis', async (req, res) => {
   const pseudo = req.body.pseudo;
   const commentaire  = req.body.commentaire;
